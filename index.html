@@ -1,0 +1,235 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>B. Sneha | My Portfolio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOGIN -->
+<div id="loginPage" class="login-page">
+  <div class="login-box">
+    <h1>B. SNEHA</h1>
+    <p>Personal Portfolio Website</p>
+
+    <form id="loginForm">
+      <label>Roll Number</label>
+      <input type="text" id="roll" placeholder="Enter Roll Number" required>
+
+      <label>Student Name</label>
+      <input type="text" id="studentName" placeholder="Enter Name" required>
+
+      <button type="submit">Login</button>
+      <p id="error"></p>
+    </form>
+  </div>
+</div>
+
+<!-- MAIN WEBSITE -->
+<div id="website" style="display:none">
+
+<header>
+  <h2>B. SNEHA</h2>
+  <nav>
+    <button onclick="showPage('about')">About</button>
+    <button onclick="showPage('skills')">Skills</button>
+    <button onclick="showPage('education')">Education</button>
+    <button onclick="showPage('projects')">Projects</button>
+    <button onclick="showPage('certificates')">Certificates</button>
+    <button onclick="showPage('contact')">Contact</button>
+  </nav>
+  <button class="logout" onclick="logout()">Logout</button>
+</header>
+
+<main>
+
+<!-- ABOUT PAGE -->
+<section id="about" class="page">
+  <h1>MY PORTFOLIO</h1>
+  <div class="card">
+    <h2>About Me</h2>
+    <h3>Hello! I am B. Sneha</h3>
+    <p>
+      I am an Artificial Intelligence and Machine Learning
+      student. I am interested in programming, web development,
+      Artificial Intelligence and new technologies.
+    </p>
+    <p>
+      My aim is to improve my technical knowledge,
+      develop creative projects and build my career in technology.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Personal Details</h2>
+    <p><b>Name:</b> B. Sneha</p>
+    <p><b>Roll Number:</b> 24JNA33010</p>
+    <p><b>Branch:</b> AIML</p>
+    <p><b>Email:</b> snehabankina@gmail.com</p>
+    <p><b>Contact:</b> 7993588788</p>
+  </div>
+</section>
+
+<!-- SKILLS PAGE -->
+<section id="skills" class="page" hidden>
+  <h1>MY TECHNICAL SKILLS</h1>
+  <p class="intro">Select any programming language to learn its basic topics.</p>
+
+  <div class="skill-grid">
+    <button onclick="showSkill('html')">HTML</button>
+    <button onclick="showSkill('css')">CSS</button>
+    <button onclick="showSkill('java')">JAVA</button>
+    <button onclick="showSkill('javascript')">JAVASCRIPT</button>
+    <button onclick="showSkill('python')">PYTHON</button>
+  </div>
+
+  <div id="skillContent" class="lesson">
+    <h2>Welcome to Programming Learning</h2>
+    <p>Select HTML, CSS, Java, JavaScript or Python above.</p>
+    <p>Each language contains basic topics, explanations and examples.</p>
+  </div>
+</section>
+
+<!-- EDUCATION PAGE -->
+<section id="education" class="page" hidden>
+  <h1>MY EDUCATION</h1>
+
+  <div class="card education-card">
+    <h2>Student Information</h2>
+    <p><b>Student Name:</b> B. Sneha</p>
+    <p><b>Roll Number:</b> 24JNA33010</p>
+    <p><b>Branch:</b> Artificial Intelligence and Machine Learning</p>
+    <p><b>Email:</b> snehabankina@gmail.com</p>
+    <p><b>Contact Number:</b> 7993588788</p>
+  </div>
+
+  <div class="card">
+    <h2>Educational Background</h2>
+    <p><b>Course:</b> Artificial Intelligence and Machine Learning</p>
+    <p><b>College:</b> Add your college name</p>
+    <p><b>Current Year:</b> Add your year</p>
+    <p><b>Previous Education:</b> Add your school and intermediate details</p>
+  </div>
+</section>
+
+<!-- PROJECTS PAGE -->
+<section id="projects" class="page" hidden>
+  <h1>MY PROJECTS</h1>
+  <p class="intro">My technical project ideas and descriptions.</p>
+
+  <div class="project-grid">
+
+    <div class="card">
+      <h2>01. Personal Portfolio Website</h2>
+      <p><b>Technology:</b> HTML, CSS, JavaScript</p>
+      <p><b>Description:</b> A personal website to display
+      my profile, skills, education and projects.</p>
+      <p><b>Purpose:</b> To showcase my technical knowledge.</p>
+    </div>
+
+    <div class="card">
+      <h2>02. Student Management System</h2>
+      <p><b>Technology:</b> Python, HTML, CSS</p>
+      <p><b>Description:</b> A system to manage student
+      information, attendance and marks.</p>
+      <p><b>Purpose:</b> To make student data management easier.</p>
+    </div>
+
+    <div class="card">
+      <h2>03. Email Spam Detection</h2>
+      <p><b>Technology:</b> Python, Machine Learning</p>
+      <p><b>Description:</b> Classifies email messages
+      as spam or genuine using a machine learning model.</p>
+      <p><b>Purpose:</b> To understand classification algorithms.</p>
+    </div>
+
+    <div class="card">
+      <h2>04. AI Chatbot</h2>
+      <p><b>Technology:</b> Python, NLP</p>
+      <p><b>Description:</b> A chatbot that responds to
+      basic user questions.</p>
+      <p><b>Purpose:</b> To learn conversational AI.</p>
+    </div>
+
+    <div class="card">
+      <h2>05. Weather Application</h2>
+      <p><b>Technology:</b> HTML, CSS, JavaScript, API</p>
+      <p><b>Description:</b> Displays weather information
+      such as temperature and conditions.</p>
+      <p><b>Purpose:</b> To learn API integration.</p>
+    </div>
+
+  </div>
+  <p class="note">Note: These are project ideas. Mark them as completed only after you build them.</p>
+</section>
+
+<!-- CERTIFICATES PAGE -->
+<section id="certificates" class="page" hidden>
+  <h1>MY CERTIFICATES</h1>
+  <div class="card">
+    <h2>My Certifications</h2>
+    <p>Upload your actual certificates here.</p>
+    <ul>
+      <li>Python Certification</li>
+      <li>Java Certification</li>
+      <li>Web Development Certification</li>
+      <li>AI & ML Certification</li>
+    </ul>
+  </div>
+</section>
+
+<!-- CONTACT PAGE -->
+<section id="contact" class="page" hidden>
+  <h1>CONTACT ME</h1>
+
+  <div class="card">
+    <h2>B. Sneha</h2>
+    <p><b>Email:</b>
+      <a href="mailto:snehabankina@gmail.com">
+      snehabankina@gmail.com</a>
+    </p>
+    <p><b>Phone:</b>
+      <a href="tel:7993588788">7993588788</a>
+    </p>
+    <p><b>Branch:</b> AIML</p>
+    <p><b>Roll Number:</b> 24JNA33010</p>
+  </div>
+
+  <div class="card">
+    <h2>Send a Message</h2>
+    <form id="contactForm">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <input type="text" placeholder="Subject" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p id="contactMessage"></p>
+  </div>
+</section>
+
+<!-- LAST PAGE -->
+<section id="thankyou" class="page" hidden>
+  <h1>THANK YOU!</h1>
+  <div class="card">
+    <h2>Thank You for Visiting My Portfolio</h2>
+    <p>Thank you for exploring my skills, education and projects.</p>
+    <button onclick="showPage('about')">Back to Portfolio</button>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p>© 2026 B. Sneha | Personal Portfolio</p>
+  <button onclick="showPage('thankyou')">Thank You</button>
+</footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
