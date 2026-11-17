@@ -1,0 +1,276 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f2fc;
+  color: #29213c;
+}
+
+/* LOGIN PAGE */
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg,#30204f,#9065d5);
+}
+
+.login-box {
+  background: white;
+  width: 90%;
+  max-width: 420px;
+  padding: 40px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 10px 30px #0003;
+}
+
+.login-box h1 {
+  color: #7043c3;
+  margin-bottom: 12px;
+}
+
+.login-box p {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  text-align: left;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 13px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* BUTTONS */
+button, .btn {
+  background: #7043c3;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+button:hover, .btn:hover {
+  background: #4d2b87;
+  transform: translateY(-2px);
+}
+
+/* HEADER */
+header {
+  background: #30204f;
+  color: white;
+  padding: 20px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+header h2 {
+  letter-spacing: 2px;
+}
+
+nav {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+nav button {
+  background: transparent;
+  color: white;
+  padding: 10px;
+}
+
+nav button:hover {
+  background: #7043c3;
+}
+
+.logout {
+  background: #b64c6a;
+}
+
+/* PAGE CONTENT */
+main {
+  min-height: 75vh;
+}
+
+.page {
+  padding: 55px 8%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.page[hidden] {
+  display: none;
+}
+
+.page h1 {
+  text-align: center;
+  color: #7043c3;
+  margin-bottom: 25px;
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 25px;
+  line-height: 1.8;
+}
+
+/* CARDS */
+.card {
+  background: white;
+  padding: 28px;
+  margin: 20px 0;
+  border-radius: 13px;
+  box-shadow: 0 5px 20px #30204f12;
+  border-left: 4px solid #7043c3;
+}
+
+.card h2 {
+  color: #7043c3;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  margin: 15px 0;
+}
+
+.card p {
+  line-height: 1.9;
+  margin: 7px 0;
+}
+
+.card a {
+  color: #7043c3;
+}
+
+/* SKILLS */
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+  gap: 18px;
+  margin: 30px 0;
+}
+
+.skill-grid button {
+  padding: 25px 15px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px #0002;
+}
+
+/* LESSONS */
+.lesson {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px #0001;
+}
+
+.lesson h2 {
+  color: #7043c3;
+  margin-bottom: 20px;
+}
+
+.topic {
+  padding: 20px 0;
+  border-bottom: 1px solid #e5ddf2;
+}
+
+.topic h3 {
+  color: #4d2b87;
+  margin-bottom: 10px;
+}
+
+.topic p {
+  line-height: 1.8;
+  margin-bottom: 12px;
+}
+
+.topic pre {
+  background: #211b32;
+  color: #e9ddff;
+  padding: 18px;
+  border-radius: 8px;
+  overflow-x: auto;
+  line-height: 1.6;
+}
+
+/* PROJECTS */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+  gap: 18px;
+}
+
+.project-grid .card {
+  margin: 0;
+}
+
+.note {
+  margin-top: 20px;
+  color: #7043c3;
+  text-align: center;
+}
+
+/* FOOTER */
+footer {
+  background: #30204f;
+  color: white;
+  padding: 25px;
+  text-align: center;
+}
+
+footer button {
+  margin-top: 12px;
+}
+
+/* MOBILE */
+@media(max-width:700px) {
+  header {
+    flex-direction: column;
+  }
+
+  nav {
+    justify-content: center;
+  }
+
+  nav button {
+    font-size: 12px;
+    padding: 9px;
+  }
+
+  .page {
+    padding: 35px 5%;
+  }
+
+  .login-box {
+    padding: 28px;
+  }
+}
